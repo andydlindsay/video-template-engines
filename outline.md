@@ -1,4 +1,12 @@
+# Purpose
+* Demonstrate that `res.render` is simply a function that takes in an object and returns a string (in the form of HTML)
+* Students often struggle with how data ends up in the template
+* Placement in curriculum: W3D1 or W2E
+
+# Outline
+
 ### Basic function, no arguments, returns a string
+* Start with something familiar and simple
 
 ```js
 const sayHello = () => {
@@ -10,6 +18,8 @@ console.log(result); // 'hello there';
 ```
 
 ### We can extend the functionality by accepting an argument
+* Having the function accept an argument allows us to vary the return value predictably
+* This extends the usefulness of the function (hopefully review)
 
 ```js
 const sayHello = (name) => {
@@ -38,7 +48,7 @@ console.log(result); // 'hello there Alice, you are 27 years old because you wer
 sayHello('Alice', , 'January 11th, 1989'); // ERROR!
 ```
 
-* The order of the arguments **is** important
+* The order of the arguments _is_ **important**
 
 ```js
 sayHello('Alice', 27, 'January 11th, 1989');
@@ -46,7 +56,7 @@ sayHello('Alice', 27, 'January 11th, 1989');
 sayHello('Alice', 'January 11th, 1989', 27);
 ```
 
-### It is a better idea to accept an object
+### What if we accept an object instead?
 * We can specify the keys of the object in any order
 * We can skip a key if we don't need to pass that information in
 
@@ -64,8 +74,10 @@ const result = sayHello({
 console.log(result); // 'hello there Alice, you are 27 years old because you were born on January 11th, 1989';
 ```
 
+### Let's give that object a name
+* Instead of passing an anonymous object, we'll store it in `variables` first
+
 ```js
-// or use a named object
 const variables = {
   name: 'Alice',
   age: 27,
@@ -77,7 +89,8 @@ const result = sayHello(variables);
 console.log(result); // 'hello there Alice, you are 27 years old because you were born on January 11th, 1989';
 ```
 
-### Instead of returning a sentence, what if we return a string containing some HTML?
+### Let's get creative with the return value
+* Instead of returning a sentence, what if we return a string containing some HTML?
 
 ```js
 const sayHello = (options) => {
@@ -107,6 +120,7 @@ console.log(result);
 ```
 
 ### We could also specify which template we want our variables to populate
+* NOTE: I think this iteration might be too in the weeds and the video could end after the previous one
 
 ```js
 const sayHello = (template, options) => {
