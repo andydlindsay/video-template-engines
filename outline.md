@@ -3,6 +3,14 @@
 * Students often struggle with how data ends up in the template
 * Placement in curriculum: W3D1 or W2E
 
+# Prerequisites
+* To get the most out of the video, students should have a decent understanding of the following:
+  * Arrow functions (W1D4)
+  * Objects (W1D3) and dot syntax
+  * Return values (prep course)
+  * Function expressions (W1)
+  * Template Literals (W1D1) especially wrt multi-line strings and variable interpolation
+
 # Outline
 
 ### Basic function, no arguments, returns a string
